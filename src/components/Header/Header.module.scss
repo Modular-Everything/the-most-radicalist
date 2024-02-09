@@ -4,6 +4,7 @@
   width: 100%;
   z-index: 100;
   height: var(--header-height);
+  overflow: hidden;
 
   &__wrapper {
     display: grid;
@@ -11,6 +12,7 @@
     align-items: center;
     padding-left: 0;
     padding-right: 0;
+    transform: translateY(-100%);
   }
 
   &__nav {

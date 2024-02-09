@@ -12,7 +12,7 @@ import { MoonIcon } from "@/icons/MoonIcon";
 import { PersonIcon } from "@/icons/PersonIcon";
 import { SunIcon } from "@/icons/SunIcon";
 
-import { RotateLogo } from "./animations";
+import { rotateLogo, showHeader } from "./animations";
 import styles from "./Header.module.scss";
 
 export function Header({
@@ -25,7 +25,8 @@ export function Header({
 
   useGSAP(
     () => {
-      RotateLogo(".logo");
+      showHeader(".container");
+      rotateLogo(".logo");
     },
     { scope: container }
   );
