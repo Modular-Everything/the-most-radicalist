@@ -24,7 +24,7 @@ export function YouTubeBanner() {
   return (
     <section className={styles.youtube} ref={container}>
       <Image
-        src="/beer2.avif"
+        src="/ytthumb.jpeg"
         fill
         alt=""
         className={clsx("poster", styles.youtube__poster)}
@@ -32,7 +32,7 @@ export function YouTubeBanner() {
 
       <div className={clsx("youtube", styles.youtube__wrapper)}>
         <ReactPlayer
-          url="https://www.youtube.com/watch?v=x_acAPULk38?t=20s"
+          url="https://www.youtube.com/watch?v=x_acAPULk38?t=50s"
           muted
           playing
           width="100%"
