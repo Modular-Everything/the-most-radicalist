@@ -32,19 +32,6 @@
   --foreground-rgb: var(--white-rgb);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: var(--black);
-    --background-rgb: var(--black-rgb);
-    --foreground: var(--white);
-    --foreground-rgb: var(--white-rgb);
-  }
-
-  html {
-    color-scheme: dark;
-  }
-}
-
 /* Resets */
 * {
   box-sizing: border-box;
