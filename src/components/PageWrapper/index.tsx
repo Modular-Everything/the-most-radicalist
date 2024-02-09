@@ -44,7 +44,7 @@ export function PageWrapper({ children }: { children: ReactNode }) {
   return (
     <>
       <Header theme={[theme, setTheme]} />
-      {children}
+      <main>{children}</main>
     </>
   );
 }

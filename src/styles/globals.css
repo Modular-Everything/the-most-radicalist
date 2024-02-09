@@ -1,6 +1,7 @@
 :root {
   /* General stuff */
-  --max-width: 1100px;
+  --max-width: 144rem;
+  --header-height: 7rem;
   --border-radius: 12px;
 
   /* Fonts */
@@ -90,9 +91,14 @@ body {
 
 /* Container */
 .container {
-  max-width: 144rem;
+  max-width: var(--max-width);
   width: 100%;
   margin: 0 auto;
   padding-left: 2.2rem;
   padding-right: 2.2rem;
+}
+
+/* Push first component down below header */
+header ~ main {
+  margin-top: var(--header-height);
 }
