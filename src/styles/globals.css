@@ -9,22 +9,38 @@
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
   /* Base colours */
-  --white-rgb: 255, 255, 255;
+  --white-rgb: 255 255 255;
   --white: rgb(var(--white-rgb));
-  --black-rgb: 16, 16, 16;
+  --black-rgb: 16 16 16;
   --black: rgb(var(--black-rgb));
-  --grey-rgb: 67, 67, 67;
+  --grey-rgb: 67 67 67;
   --grey: rgb(var(--grey-rgb));
 
   /* General colours */
+  --background: var(--white);
+  --background-rgb: var(--white-rgb);
+  --foreground: var(--black);
+  --foreground-rgb: var(--black-rgb);
+}
+
+/* Dark mode support */
+.dark {
   --background: var(--black);
+  --background-rgb: var(--black-rgb);
   --foreground: var(--white);
+  --foreground-rgb: var(--white-rgb);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: var(--white);
-    --foreground: var(--black);
+    --background: var(--black);
+    --background-rgb: var(--black-rgb);
+    --foreground: var(--white);
+    --foreground-rgb: var(--white-rgb);
+  }
+
+  html {
+    color-scheme: dark;
   }
 }
 
@@ -41,20 +57,42 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  font-size: 10px;
+  color-scheme: light;
+}
+
 a {
   color: inherit;
   text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  cursor: pointer;
 }
 
 /* Body */
 body {
   color: var(--foreground);
   background: var(--background);
+  font-size: 1.6rem;
 }
 
-/* Set colour scheme */
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+/* Container */
+.container {
+  max-width: 144rem;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 2.2rem;
+  padding-right: 2.2rem;
 }
