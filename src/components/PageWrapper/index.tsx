@@ -6,6 +6,8 @@ import { Header } from "../Header";
 
 export function PageWrapper({ children }: { children: ReactNode }) {
   const [theme, setTheme] = useState<string>(() => {
+    if (typeof window === "undefined") return "dark";
+
     // Check for saved theme in local storage
     const savedTheme = window.localStorage.getItem("theme");
     if (savedTheme) {
