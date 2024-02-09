@@ -1,0 +1,7 @@
+.youtube {
+  &__embed {
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    pointer-events: none;
+  }
+}
