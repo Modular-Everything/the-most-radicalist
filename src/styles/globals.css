@@ -85,6 +85,13 @@ body {
   padding-right: 2.2rem;
 }
 
+/* Blocks */
+.blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 11rem;
+}
+
 /* Push first component down below header */
 header ~ main {
   margin-top: var(--header-height);
