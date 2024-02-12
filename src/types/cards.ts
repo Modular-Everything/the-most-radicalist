@@ -6,4 +6,5 @@ export interface CardProps {
   track?: string;
   copy?: string;
   tags?: string[];
+  background?: string;
 }
