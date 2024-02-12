@@ -2,20 +2,37 @@
 
 import { useGSAP } from "@gsap/react";
 import clsx from "clsx";
-import gsap from "gsap";
+import { formatDistanceToNowStrict } from "date-fns";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 
+import { Pill } from "../Pill";
 import { animateMediumCards } from "./animations";
 import styles from "./CardMarquee.module.scss";
 import cards from "./mock-data";
 import { CardProps } from "./types";
 
 function SmallCard({ artist, media, date, track, copy, tags }: CardProps) {
+  // get the relative date (2 days ago, 3 weeks ago, etc)
+  const relativeDate =
+    date && formatDistanceToNowStrict(new Date(date), { addSuffix: true });
+
   return (
     <>
       <div className={styles.marquee__card__info}>
-        {artist && <h4>{artist}</h4>}
+        <div className={styles.marquee__card__date}>
+          {relativeDate && <Pill label={relativeDate} />}
+        </div>
+
+        <div className={styles.marquee__card__meta}>
+          {artist && <h4>{artist}</h4>}
+          {track && <h6>{track}</h6>}
+          {copy && <p>{copy}</p>}
+
+          <ul className={styles.marquee__card__tags}>
+            {tags?.map((tag, index) => <li key={index}>{tag}</li>)}
+          </ul>
+        </div>
       </div>
       {media && (
         <div className={styles.marquee__card__media}>
@@ -65,8 +82,8 @@ export function CardMarquee() {
               <SmallCard
                 artist={card.artist}
                 media={card.media}
-                date={card.data}
-                track={card.artistTrack}
+                date={card.date}
+                track={card.track}
                 copy={card.copy}
                 tags={card.tags}
               />
@@ -84,8 +101,8 @@ export function CardMarquee() {
               <SmallCard
                 artist={card.artist}
                 media={card.media}
-                date={card.data}
-                track={card.artistTrack}
+                date={card.date}
+                track={card.track}
                 copy={card.copy}
                 tags={card.tags}
               />

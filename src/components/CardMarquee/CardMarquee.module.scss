@@ -36,6 +36,12 @@
       height: 100%;
       width: 100%;
       padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &__date {
     }
 
     &__media {
