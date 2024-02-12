@@ -25,12 +25,12 @@ export function CardMarquee() {
     );
   }, []);
 
-  useGSAP(
-    () => {
-      animateMediumCards(".card");
-    },
-    { scope: container }
-  );
+  // useGSAP(
+  //   () => {
+  //     animateMediumCards(".card");
+  //   },
+  //   { scope: container }
+  // );
 
   return (
     <div className={styles.marquee} ref={container}>
@@ -46,6 +46,7 @@ export function CardMarquee() {
               track={card.track}
               copy={card.copy}
               tags={card.tags}
+              background={card.background}
             />
           ))}
           {cards?.map((card) => (
@@ -62,6 +63,7 @@ export function CardMarquee() {
               track={card.track}
               copy={card.copy}
               tags={card.tags}
+              background={card.background}
             />
           ))}
         </div>
