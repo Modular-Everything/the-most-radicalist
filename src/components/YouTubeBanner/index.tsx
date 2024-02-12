@@ -3,12 +3,14 @@
 import { useGSAP } from "@gsap/react";
 import clsx from "clsx";
 import gsap from "gsap";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useRef } from "react";
-import ReactPlayer from "react-player";
 
 import { showPoster, showYouTubeBanner } from "./animations";
 import styles from "./YouTubeBanner.module.scss";
+
+const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
 
 export function YouTubeBanner() {
   const container = useRef<HTMLDivElement | null>(null);
