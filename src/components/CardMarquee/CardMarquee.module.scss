@@ -2,7 +2,7 @@
   &__track {
     width: fit-content;
     animation: marquee-desktop
-      calc(var(--card-speed, 3s) * var(--card-count, 6)) linear;
+      calc(var(--card-speed, 3s) * var(--card-count, 6)) linear infinite;
   }
 
   &__grid {
@@ -21,6 +21,10 @@
     position: relative;
     overflow: hidden;
     visibility: hidden;
+
+    &__clone {
+      visibility: visible;
+    }
 
     &:nth-of-type(2) {
       z-index: 20;
