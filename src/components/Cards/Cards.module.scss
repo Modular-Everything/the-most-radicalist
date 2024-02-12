@@ -4,12 +4,6 @@
   border-radius: var(--border-radius);
   padding: 0.1rem;
 
-  &:hover {
-    .card__background__gradient {
-      opacity: 1;
-    }
-  }
-
   &__wrapper {
     border: 1px solid rgb(var(--foreground-rgb) / 10%);
     border-radius: var(--border-radius);
@@ -41,6 +35,12 @@
       z-index: 10;
       opacity: 0.35;
       transition: 500ms ease opacity;
+    }
+  }
+
+  &:hover {
+    .card__background__gradient {
+      opacity: 1;
     }
   }
 }
