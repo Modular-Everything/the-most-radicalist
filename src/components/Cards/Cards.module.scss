@@ -1,0 +1,33 @@
+.card {
+  &__medium {
+    width: 37rem;
+    height: 49.5rem;
+    border-radius: var(--border-radius);
+    border: 1px solid rgb(var(--foreground-rgb) / 20%);
+    position: relative;
+    overflow: hidden;
+
+    &__info {
+      position: relative;
+      z-index: 10;
+      height: 100%;
+      width: 100%;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &__media {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      img {
+        object-fit: cover;
+      }
+    }
+  }
+}

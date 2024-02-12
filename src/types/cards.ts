@@ -1,7 +1,8 @@
 export interface CardProps {
+  className?: string;
   artist?: string;
   media?: string;
-  date?: Date;
+  date?: string;
   track?: string;
   copy?: string;
   tags?: string[];
