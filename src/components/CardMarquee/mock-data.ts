@@ -1,3 +1,8 @@
+const randomColorGenerator = () => {
+  const randomColor = `rgb(${Math.floor(Math.random() * 256)} ${Math.floor(Math.random() * 256)} ${Math.floor(Math.random() * 256)})`;
+  return randomColor;
+};
+
 const cards = [
   {
     id: 0,
@@ -7,6 +12,7 @@ const cards = [
     date: "2024-02-10",
     copy: "Lorem ipsum dolor sit amet.",
     tags: ["Hip-Hop", "Beats"],
+    background: randomColorGenerator(),
   },
   {
     id: 1,
@@ -16,6 +22,7 @@ const cards = [
     date: "2024-02-01",
     copy: "Consectetur adipiscing elit.",
     tags: ["Hip-Hop", "Rap"],
+    background: randomColorGenerator(),
   },
   {
     id: 2,
@@ -25,6 +32,7 @@ const cards = [
     date: "2024-01-24",
     copy: "Sed do eiusmod tempor incididunt.",
     tags: ["Hip-Hop", "Rap"],
+    background: randomColorGenerator(),
   },
   {
     id: 3,
@@ -34,6 +42,7 @@ const cards = [
     date: "2024-01-12",
     copy: "Ut labore et dolore magna aliqua.",
     tags: ["Hip-Hop", "Old School"],
+    background: randomColorGenerator(),
   },
   {
     id: 4,
@@ -43,6 +52,7 @@ const cards = [
     date: "2023-12-11",
     copy: "Ut enim ad minim veniam.",
     tags: ["Hip-Hop", "Rap"],
+    background: randomColorGenerator(),
   },
   {
     id: 5,
@@ -52,6 +62,7 @@ const cards = [
     date: "2023-12-10",
     copy: "Quis nostrud exercitation ullamco.",
     tags: ["Hip-Hop", "Rap"],
+    background: randomColorGenerator(),
   },
   {
     id: 6,
@@ -61,6 +72,7 @@ const cards = [
     date: "2023-11-09",
     copy: "Duis aute irure dolor in reprehenderit.",
     tags: ["Hip-Hop", "Rap"],
+    background: randomColorGenerator(),
   },
   {
     id: 7,
@@ -70,6 +82,7 @@ const cards = [
     date: "2023-10-08",
     copy: "Excepteur sint occaecat cupidatat non proident.",
     tags: ["Hip-Hop", "Rap"],
+    background: randomColorGenerator(),
   },
   {
     id: 8,
@@ -79,6 +92,7 @@ const cards = [
     date: "2023-10-07",
     copy: "Sunt in culpa qui officia deserunt mollit anim id est laborum.",
     tags: ["Hip-Hop", "Rap"],
+    background: randomColorGenerator(),
   },
   {
     id: 9,
@@ -88,6 +102,7 @@ const cards = [
     date: "2023-10-06",
     copy: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     tags: ["Hip-Hop", "Rap"],
+    background: randomColorGenerator(),
   },
 ];
 
