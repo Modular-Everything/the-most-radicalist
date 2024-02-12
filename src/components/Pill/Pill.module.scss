@@ -1,0 +1,11 @@
+.pill {
+  padding: 0.8rem 1.6rem;
+  border-radius: 999rem;
+  border: 1px solid rgb(var(--white-rgb) / 20%);
+  display: inline-block;
+  backdrop-filter: blur(5rem);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.006rem;
+  text-transform: capitalize;
+}
