@@ -25,12 +25,12 @@ export function CardMarquee() {
     );
   }, []);
 
-  // useGSAP(
-  //   () => {
-  //     animateMediumCards(".card");
-  //   },
-  //   { scope: container }
-  // );
+  useGSAP(
+    () => {
+      animateMediumCards(".card");
+    },
+    { scope: container }
+  );
 
   return (
     <div className={styles.marquee} ref={container}>
