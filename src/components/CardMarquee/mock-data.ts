@@ -1,5 +1,5 @@
 const randomColorGenerator = () => {
-  const randomColor = `rgb(${Math.floor(Math.random() * 256)} ${Math.floor(Math.random() * 256)} ${Math.floor(Math.random() * 256)})`;
+  const randomColor = `hsl(${Math.floor(Math.random() * 360)}, 100%, 80%)`;
   return randomColor;
 };
 
