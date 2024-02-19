@@ -27,7 +27,9 @@ export function YouTubeBanner() {
     <section className={styles.youtube} ref={container}>
       <Image
         src="/ytthumb.jpeg"
-        fill
+        width={1600}
+        height={900}
+        sizes="(max-width: 768px) 60vw, 100vw"
         alt=""
         className={clsx("poster", styles.youtube__poster)}
       />
