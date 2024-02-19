@@ -5,7 +5,8 @@
   padding: 0.1rem;
 
   &__wrapper {
-    border: 1px solid rgb(var(--foreground-rgb) / 10%);
+    border: 1px solid rgb(var(--white-rgb) / 10%);
+    color: var(--white);
     border-radius: var(--border-radius);
     overflow: hidden;
     position: relative;
