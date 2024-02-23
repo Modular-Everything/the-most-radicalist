@@ -5,15 +5,9 @@
   z-index: 100;
   height: var(--header-height);
   overflow: hidden;
-
-  &__wrapper {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center;
-    padding-left: 0;
-    padding-right: 0;
-    transform: translateY(-100%);
-  }
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
 
   &__nav {
     display: flex;
@@ -36,7 +30,7 @@
     }
 
     &:hover svg path {
-      fill: var(--foreground);
+      fill: rgb(var(--foreground-rgb));
     }
   }
 

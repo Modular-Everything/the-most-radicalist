@@ -8,12 +8,16 @@
   --grey: rgb(var(--grey-rgb));
 
   /* THEME colours */
+  --background-rgb: var(--white-rgb);
   --background: var(--white);
+  --foreground-rgb: var(--black-rgb);
   --foreground: var(--black);
 }
 
 [data-theme="dark"] {
+  --background-rgb: var(--black-rgb);
   --background: var(--black);
+  --foreground-rgb: var(--white-rgb);
   --foreground: var(--white);
 }
 
