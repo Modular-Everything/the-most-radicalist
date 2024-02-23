@@ -1,0 +1,50 @@
+.header {
+  background-color: rgb(var(--background-rgb) / 80%);
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  height: var(--header-height);
+  overflow: hidden;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+    transform: translateY(-100%);
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__logo,
+  &__lightToggle,
+  &__nav__icon {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    padding: 2.2rem;
+
+    svg path {
+      fill: rgb(var(--foreground-rgb) / 50%);
+      transition: 250ms ease fill;
+    }
+
+    &:hover svg path {
+      fill: var(--foreground);
+    }
+  }
+
+  &__logo {
+    justify-self: start;
+  }
+
+  &__lightToggle {
+    justify-self: end;
+  }
+}

@@ -4,7 +4,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useState } from "react";
 
-import { Hero } from "@/components/Hero";
+import { Hero } from "@/components-old/Hero";
 
 export default function LandingPage() {
   const [timeline, setTimeline] = useState<gsap.core.Timeline>();

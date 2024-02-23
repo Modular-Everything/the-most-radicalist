@@ -4,7 +4,7 @@ import { useGSAP } from "@gsap/react";
 import clsx from "clsx";
 import { useEffect, useRef } from "react";
 
-import { CardMedium } from "@/components/Cards/CardMedium";
+import { CardMedium } from "@/components-old/Cards/CardMedium";
 
 import { animateMediumCards } from "./animations";
 import styles from "./CardMarquee.module.scss";

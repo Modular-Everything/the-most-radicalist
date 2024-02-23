@@ -8,7 +8,7 @@ import gsap from "gsap";
 import Image from "next/image";
 import { MouseEvent, useRef } from "react";
 
-import { Pill } from "@/components/Pill";
+import { Pill } from "@/components-old/Pill";
 import { relativeDate } from "@/helpers/relativeDate";
 import { CardProps } from "@/types/cards";
 

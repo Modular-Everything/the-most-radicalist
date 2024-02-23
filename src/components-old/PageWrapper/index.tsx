@@ -2,7 +2,7 @@
 
 import { ReactNode, useEffect, useState } from "react";
 
-import { Header } from "../Header";
+// import { Header } from "../Header";
 
 export function PageWrapper({ children }: { children: ReactNode }) {
   const [theme, setTheme] = useState<string>(() => {
@@ -45,7 +45,7 @@ export function PageWrapper({ children }: { children: ReactNode }) {
 
   return (
     <>
-      <Header theme={[theme, setTheme]} />
+      {/* <Header theme={[theme, setTheme]} /> */}
       <main className="blocks">{children}</main>
     </>
   );

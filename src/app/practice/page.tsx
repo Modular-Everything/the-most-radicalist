@@ -5,7 +5,7 @@ import { gsap } from "gsap";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-import { ImageGrid } from "@/components/ImageGrid";
+import { ImageGrid } from "@/components-old/ImageGrid";
 
 // To do
 // - [x] Set up router
