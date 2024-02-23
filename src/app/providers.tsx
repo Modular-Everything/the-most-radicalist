@@ -2,7 +2,15 @@
 
 import { usePathname } from "next/navigation";
 import { ThemeProvider, useTheme } from "next-themes";
-import { createContext, ReactNode, useEffect, useRef } from "react";
+import {
+  createContext,
+  Dispatch,
+  ReactNode,
+  SetStateAction,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 
 function usePrevious<T>(value: T) {
   const ref = useRef<T>();
@@ -38,14 +46,23 @@ function ThemeWatcher() {
   return null;
 }
 
-export const AppContext = createContext<{ previousPathname?: string }>({});
+export const AppContext = createContext<{
+  previousPathname?: string;
+  isLoading: boolean;
+  setLoading: Dispatch<SetStateAction<boolean>>;
+}>({
+  previousPathname: undefined,
+  isLoading: false,
+  setLoading: () => {},
+});
 
 export function Providers({ children }: { children: ReactNode }) {
   const pathname = usePathname();
   const previousPathname = usePrevious(pathname);
+  const [isLoading, setLoading] = useState<boolean>(true);
 
   return (
-    <AppContext.Provider value={{ previousPathname }}>
+    <AppContext.Provider value={{ previousPathname, isLoading, setLoading }}>
       <ThemeWatcher />
       <ThemeProvider disableTransitionOnChange>{children}</ThemeProvider>
     </AppContext.Provider>
