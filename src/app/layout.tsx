@@ -2,6 +2,7 @@ import "@/styles/resets.css";
 import "@/styles/globals.css";
 
 import { type Metadata } from "next";
+import localFont from "next/font/local";
 import { ReactNode } from "react";
 
 import { Providers } from "@/app/providers";
@@ -15,9 +16,14 @@ export const metadata: Metadata = {
   description: "This is a work in progress.",
 };
 
+const powerGrotesk = localFont({
+  src: "./PowerGroteskTrial-Regular.woff2",
+  display: "swap",
+});
+
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className="h-full antialiased" suppressHydrationWarning>
+    <html lang="en" className={powerGrotesk.className} suppressHydrationWarning>
       <body>
         <Providers>
           <Layout>{children}</Layout>
