@@ -2,14 +2,19 @@
 import { ReactNode } from "react";
 
 import { Header } from "@/components/Header";
+import { PageLoader } from "@/components/PageLoader";
+
+import styles from "./Layout.module.scss";
 
 export function Layout({ children }: { children: ReactNode }) {
   return (
     <>
-      <Header />
-      {/* <main className="flex-auto">{children}</main> */}
-      <main>{children}</main>
-      {/* <Footer /> */}
+      <PageLoader />
+
+      <div className={styles.layout}>
+        <Header />
+        <main>{children}</main>
+      </div>
     </>
   );
 }
