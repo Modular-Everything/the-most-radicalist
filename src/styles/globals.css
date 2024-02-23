@@ -12,6 +12,9 @@
   --background: var(--white);
   --foreground-rgb: var(--black-rgb);
   --foreground: var(--black);
+
+  /* GENERAL shit */
+  --header-height: 7rem;
 }
 
 [data-theme="dark"] {
