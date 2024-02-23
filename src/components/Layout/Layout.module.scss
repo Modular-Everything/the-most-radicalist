@@ -1,4 +1,5 @@
-/* .layout {
-  opacity: 0;
-  visibility: hidden;
-} */
+.layout {
+  & main {
+    margin-top: var(--header-height);
+  }
+}
