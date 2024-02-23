@@ -2,14 +2,16 @@
 
 import { useGSAP } from "@gsap/react";
 import clsx from "clsx";
-import { useRef, useState } from "react";
+import { useContext, useRef } from "react";
+
+import { AppContext } from "@/app/providers";
 
 import { revealPage } from "./animations";
 import styles from "./PageLoader.module.scss";
 
 export function PageLoader() {
   const container = useRef<HTMLDivElement | null>(null);
-  const [loading, setLoading] = useState<boolean>(true);
+  const { isLoading, setLoading } = useContext(AppContext);
 
   useGSAP(
     () => {
@@ -18,7 +20,7 @@ export function PageLoader() {
     { scope: container }
   );
 
-  if (loading) {
+  if (isLoading) {
     return (
       <div ref={container}>
         <div className={clsx("wrapper", styles.pageLoader)}>
