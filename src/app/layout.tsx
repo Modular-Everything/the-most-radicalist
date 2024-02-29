@@ -17,7 +17,18 @@ export const metadata: Metadata = {
 };
 
 const powerGrotesk = localFont({
-  src: "./PowerGroteskTrial-Regular.woff2",
+  src: [
+    {
+      path: "./PowerGroteskTrial-Regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./PowerGroteskTrial-Heavy.woff2",
+      weight: "800",
+      style: "normal",
+    },
+  ],
   display: "swap",
 });
 
