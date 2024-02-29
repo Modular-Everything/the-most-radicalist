@@ -1,0 +1,112 @@
+.hero {
+  --height: calc(100vh - var(--header-height));
+  --size: clamp(6rem, 5vw, 12rem);
+  --mrq-col: calc(var(--size) / 1.5);
+
+  overflow: hidden;
+  position: relative;
+
+  &__overlay {
+    height: var(--height);
+    width: 100%;
+    display: grid;
+    grid-template-columns:
+      1fr var(--mrq-col) 1fr var(--mrq-col) 1fr var(--mrq-col)
+      1fr var(--mrq-col) 1fr;
+    transform-origin: center;
+
+    // transform: scale(1.15);
+    align-items: center;
+    justify-content: center;
+
+    &__loader {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      grid-template-rows: 1fr var(--mrq-col) 1fr var(--mrq-col) 1fr var(
+          --mrq-col
+        );
+      grid-template-columns:
+        1fr var(--mrq-col) 1fr var(--mrq-col) 1fr var(--mrq-col)
+        1fr var(--mrq-col) 1fr;
+      inset: 0;
+      z-index: 30;
+      width: 100%;
+      height: var(--height);
+      position: absolute;
+
+      &__image {
+        grid-column: span 1;
+        grid-column-start: 5;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        grid-row-start: 3;
+        transform: scale(3);
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__column {
+      height: var(--height);
+      display: grid;
+      flex-direction: column;
+      overflow: hidden;
+      grid-template-rows: 1fr var(--mrq-col) 1fr var(--mrq-col) 1fr var(
+          --mrq-col
+        );
+      grid-template-columns: 1fr;
+
+      &__imageContainer {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+      }
+
+      img {
+        object-fit: cover;
+      }
+    }
+
+    &__text {
+      background: var(--background);
+      display: flex;
+      flex-direction: row;
+      overflow: hidden;
+      height: calc(var(--size) / 2);
+      opacity: 0;
+
+      &__inner {
+        padding: calc(var(--size) / 14) 1.5vw 0 0;
+        color: rgb(var(--foreground-rgb) / 80%);
+        letter-spacing: 0.1ch;
+        font-size: calc(var(--size) / 2);
+        font-weight: 800;
+        text-transform: uppercase;
+        white-space: nowrap;
+        display: block;
+      }
+    }
+
+    &__textRotated {
+      overflow: visible;
+      rotate: 90deg;
+      top: calc(var(--size) / 12);
+      height: calc(var(--size) / 2);
+      width: calc(var(--size) / 1.5);
+      left: calc(var(--size) / 16);
+      position: relative;
+      align-self: start;
+
+      & span {
+        padding: calc(var(--size) / 24) 1.5vw 0 0;
+      }
+    }
+  }
+}
