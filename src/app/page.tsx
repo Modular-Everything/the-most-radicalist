@@ -1,12 +1,12 @@
 "use client";
 
-import { Hero } from "@/components/Hero";
+import { BrandedHero } from "@/components/BrandedHero";
 import { Cards } from "@/components-test/Cards";
 
 export default function Home() {
   return (
     <>
-      <Hero branded />
+      <BrandedHero />
       <Cards />
     </>
   );
