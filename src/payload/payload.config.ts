@@ -5,6 +5,10 @@ import { slateEditor } from "@payloadcms/richtext-slate";
 import path from "path";
 import { buildConfig } from "payload/config";
 
+import { Artists } from "./collections/Artists";
+import { Genres } from "./collections/Genres";
+import { ListPicks } from "./collections/ListPicks";
+
 // import { CoreLibraries } from "./collections/CoreLibraries";
 // import { Customers } from "./collections/Customers";
 // import { Libraries } from "./collections/Libraries";
@@ -17,6 +21,7 @@ export default buildConfig({
   },
   editor: slateEditor({}),
   // collections: [Users, Customers, Libraries, CoreLibraries],
+  collections: [Artists, ListPicks, Genres],
   typescript: {
     outputFile: path.resolve(__dirname, "payload-types.ts"),
   },
