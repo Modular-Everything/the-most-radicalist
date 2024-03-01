@@ -12,6 +12,11 @@ export const Artists: CollectionConfig = {
     {
       name: "artistName",
       type: "text",
+      required: true,
+    },
+    {
+      name: "artistBio",
+      type: "richText",
     },
   ],
 };
